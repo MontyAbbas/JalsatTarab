@@ -312,3 +312,4 @@ function selectMember(index) {
 detail.querySelector('.next-member').addEventListener('click', () => selectMember((activeIndex + 1) % members.length));
 selectMember(0);
 renderMedia();
+setLanguage('ar');
