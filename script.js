@@ -52,7 +52,7 @@ const media = [
     title: 'أنا فيك عشقت—محمد',
     youtubeId: 'rC8z3XWvdjg',
     url: 'https://www.youtube.com/watch?v=rC8z3XWvdjg',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'كلمني يا حلو العيون—توفيق',
