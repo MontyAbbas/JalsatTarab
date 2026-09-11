@@ -15,8 +15,8 @@ html { scroll-behavior: smooth; }
 body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); overflow-x: hidden; }
 .grain { position: fixed; inset: 0; pointer-events: none; opacity: .045; z-index: 20; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E"); }
 .falling-notes { position: fixed; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
-.falling-note { position: absolute; top: -12vh; color: var(--red); font-family: var(--serif); font-size: clamp(20px, 2.6vw, 36px); opacity: .28; animation: note-fall var(--fall-duration) linear var(--fall-delay) infinite; transform: translate3d(0, 0, 0) rotate(var(--fall-rotation)); }
-@keyframes note-fall { 0% { transform: translate3d(0, -12vh, 0) rotate(var(--fall-rotation)); opacity: 0; } 12% { opacity: .28; } 82% { opacity: .22; } 100% { transform: translate3d(var(--fall-drift), 115vh, 0) rotate(calc(var(--fall-rotation) + 120deg)); opacity: 0; } }
+.falling-note { position: absolute; top: -12vh; color: var(--red); font-family: var(--serif); font-size: clamp(20px, 2.6vw, 36px); opacity: .18; animation: note-fall var(--fall-duration) linear var(--fall-delay) infinite; transform: translate3d(0, 0, 0) rotate(var(--fall-rotation)); }
+@keyframes note-fall { 0% { transform: translate3d(0, -12vh, 0) rotate(var(--fall-rotation)); opacity: 0; } 12% { opacity: .18; } 82% { opacity: .14; } 100% { transform: translate3d(var(--fall-drift), 115vh, 0) rotate(calc(var(--fall-rotation) + 120deg)); opacity: 0; } }
 a { color: inherit; }
 .site-header { height: 90px; padding: 0 6vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-size: 12px; font-weight: 800; line-height: .88; letter-spacing: -.04em; }
