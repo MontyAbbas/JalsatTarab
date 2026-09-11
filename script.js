@@ -29,7 +29,7 @@ function renderMedia() {
       const memberIndex = members.findIndex(member => member.name === memberName);
       return `<a class="media-profile-link" href="#members" data-member-index="${memberIndex}">${memberName}</a>`;
     }).join('');
-    return `<tr><td><div class="media-title"><img class="media-thumb" src="https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg" alt=""><strong>${video.title}</strong></div></td><td><div class="media-people">${people}</div></td><td><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">Watch <span>↗</span></a></td></tr>`;
+    return `<tr><td><div class="media-title"><iframe class="media-player" src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong>${video.title}</strong></div></td><td><div class="media-people">${people}</div></td><td><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">Open on YouTube <span>↗</span></a></td></tr>`;
   }).join('');
   mediaList.querySelectorAll('.media-profile-link').forEach((link) => {
     link.addEventListener('click', (event) => {
