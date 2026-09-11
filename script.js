@@ -13,6 +13,9 @@ const totalMembers = members.length;
 // Add videos here with the YouTube URL and the member names who appear in them.
 const media = [];
 
+// Add each picture here when supplied: { image, title, detail }.
+const rollingPictures = [];
+
 const translations = {
   en: {
     htmlLang: 'en', direction: 'ltr', nav: ['Our sound', 'The ensemble', 'Media', 'Guestbook'], headerCta: 'Meet the seven <span>↗</span>', eyebrow: 'An ensemble in conversation', heroTitle: 'Music you<br><em>feel</em> before<br>you name it.', heroIntro: 'Jalsat Tarab is a circle of seven musicians keeping the old songs close, and leaving room for something new.', enter: 'Enter the majlis <span>↓</span>', aboutTag: '01 / The feeling', aboutTitle: 'A gathering,<br><em>not a genre.</em>', aboutOne: 'We meet somewhere between Sudanese golden age, Egyptian tarab, Levantine longing, and the songs our parents played too loud.', aboutTwo: 'There is a pulse underneath it all: listen deeply, answer honestly, and let the room decide where the song goes next.', membersTag: '02 / The people', membersTitle: 'Seven ways to<br><em>say the same thing.</em>', mediaTag: '03 / On record', mediaTitle: 'Shared<br><em>moments.</em>', mediaIntro: 'Watch the ensemble in motion. Each video connects back to the people singing and playing in it.', mediaEmpty: 'Videos will appear here when the ensemble’s recordings are ready.', guestbookTag: '04 / Leave a note', guestbookTitle: 'What did<br><em>you hear?</em>', guestbookIntro: 'Leave a thought for the ensemble. Notes are reviewed before they appear here.', nameLabel: 'Your name', noteLabel: 'Your note', namePlaceholder: 'A name or initials', notePlaceholder: 'Tell us what stayed with you...', post: 'Post note <span>↗</span>', footer: 'Seven musicians. One open room.'
@@ -62,6 +65,49 @@ const detail = document.querySelector('.member-detail');
 let activeIndex = 0;
 
 const mediaList = document.querySelector('.media-list');
+const photoStage = document.querySelector('.photo-banner-stage');
+const photoDots = document.querySelector('.photo-dots');
+let photoIndex = 0;
+let photoTimer;
+
+function renderPhoto(index) {
+  if (!rollingPictures.length) {
+    photoStage.innerHTML = '<div class="photo-empty">Your ensemble pictures will roll here.</div>';
+    photoDots.innerHTML = '';
+    return;
+  }
+  const picture = rollingPictures[index];
+  photoStage.innerHTML = `<figure class="photo-slide"><img src="${picture.image}" alt="${picture.title}"><figcaption><strong>${picture.title}</strong><span>${picture.detail || 'Jalsat Tarab'}</span></figcaption></figure>`;
+  photoDots.querySelectorAll('.photo-dot').forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
+}
+
+function nextPhoto(step = 1) {
+  if (!rollingPictures.length) return;
+  photoIndex = (photoIndex + step + rollingPictures.length) % rollingPictures.length;
+  renderPhoto(photoIndex);
+}
+
+document.querySelector('.photo-prev').addEventListener('click', () => { nextPhoto(-1); resetPhotoTimer(); });
+document.querySelector('.photo-next').addEventListener('click', () => { nextPhoto(); resetPhotoTimer(); });
+
+function resetPhotoTimer() {
+  clearInterval(photoTimer);
+  if (rollingPictures.length > 1) photoTimer = setInterval(() => nextPhoto(), 6000);
+}
+
+if (rollingPictures.length) {
+  rollingPictures.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.className = `photo-dot${index === 0 ? ' active' : ''}`;
+    dot.type = 'button';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', `Show picture ${index + 1}`);
+    dot.addEventListener('click', () => { photoIndex = index; renderPhoto(photoIndex); resetPhotoTimer(); });
+    photoDots.appendChild(dot);
+  });
+}
+renderPhoto(0);
+resetPhotoTimer();
 
 function renderMedia() {
   if (!media.length) {
