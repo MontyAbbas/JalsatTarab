@@ -13,6 +13,50 @@ const totalMembers = members.length;
 // Add videos here with the YouTube URL and the member names who appear in them.
 const media = [];
 
+const translations = {
+  en: {
+    htmlLang: 'en', direction: 'ltr', nav: ['Our sound', 'The ensemble', 'Media', 'Guestbook'], headerCta: 'Meet the seven <span>↗</span>', eyebrow: 'An ensemble in conversation', heroTitle: 'Music you<br><em>feel</em> before<br>you name it.', heroIntro: 'Jalsat Tarab is a circle of seven musicians keeping the old songs close, and leaving room for something new.', enter: 'Enter the majlis <span>↓</span>', aboutTag: '01 / The feeling', aboutTitle: 'A gathering,<br><em>not a genre.</em>', aboutOne: 'We meet somewhere between Sudanese golden age, Egyptian tarab, Levantine longing, and the songs our parents played too loud.', aboutTwo: 'There is a pulse underneath it all: listen deeply, answer honestly, and let the room decide where the song goes next.', membersTag: '02 / The people', membersTitle: 'Seven ways to<br><em>say the same thing.</em>', mediaTag: '03 / On record', mediaTitle: 'Shared<br><em>moments.</em>', mediaIntro: 'Watch the ensemble in motion. Each video connects back to the people singing and playing in it.', mediaEmpty: 'Videos will appear here when the ensemble’s recordings are ready.', guestbookTag: '04 / Leave a note', guestbookTitle: 'What did<br><em>you hear?</em>', guestbookIntro: 'Leave a thought for the ensemble. Notes are reviewed before they appear here.', nameLabel: 'Your name', noteLabel: 'Your note', namePlaceholder: 'A name or initials', notePlaceholder: 'Tell us what stayed with you...', post: 'Post note <span>↗</span>', footer: 'Seven musicians. One open room.'
+  },
+  ar: {
+    htmlLang: 'ar', direction: 'rtl', nav: ['صوتنا', 'الأعضاء', 'المواد المرئية', 'دفتر الزوار'], headerCta: 'تعرّف على السبعة <span>↗</span>', eyebrow: 'فرقة في حوار', heroTitle: 'موسيقى<br><em>تشعر بها</em> قبل<br>أن تسميها.', heroIntro: 'جلسة طرب هي دائرة من سبعة موسيقيين، نُبقي الأغاني القديمة قريبة ونترك مساحة لما هو جديد.', enter: 'ادخل المجلس <span>↓</span>', aboutTag: '01 / الإحساس', aboutTitle: 'جلسة،<br><em>لا نوع موسيقي.</em>', aboutOne: 'نلتقي بين العصر الذهبي للموسيقى السودانية، والطرب المصري، وحنين الشام، والأغاني التي كان آباؤنا يرفعون صوتها.', aboutTwo: 'تحت كل ذلك نبض واحد: أن نصغي بعمق، ونجيب بصدق، ونترك للمجلس أن يقرر إلى أين تمضي الأغنية.', membersTag: '02 / الأشخاص', membersTitle: 'سبعة طرق<br><em>لقول الشيء نفسه.</em>', mediaTag: '03 / في التسجيل', mediaTitle: 'لحظات<br><em>مشتركة.</em>', mediaIntro: 'شاهد الفرقة وهي تغني وتعزف. كل فيديو يقودك إلى الأشخاص المشاركين فيه.', mediaEmpty: 'ستظهر الفيديوهات هنا عندما تصبح تسجيلات الفرقة جاهزة.', guestbookTag: '04 / اترك رسالة', guestbookTitle: 'ماذا<br><em>سمعت؟</em>', guestbookIntro: 'اترك كلمة للفرقة. نراجع الرسائل قبل ظهورها هنا.', nameLabel: 'اسمك', noteLabel: 'رسالتك', namePlaceholder: 'الاسم أو الأحرف الأولى', notePlaceholder: 'اكتب ما بقي معك...', post: 'انشر الرسالة <span>↗</span>', footer: 'سبعة موسيقيين. مجلس واحد مفتوح.'
+  }
+};
+
+function setLanguage(language) {
+  const copy = translations[language];
+  document.documentElement.lang = copy.htmlLang;
+  document.documentElement.dir = copy.direction;
+  document.querySelectorAll('.nav a').forEach((link, index) => { link.textContent = copy.nav[index]; });
+  document.querySelector('.header-cta').innerHTML = copy.headerCta;
+  document.querySelector('.eyebrow').innerHTML = `<span class="pulse"></span> ${copy.eyebrow}`;
+  document.querySelector('h1').innerHTML = copy.heroTitle;
+  document.querySelector('.hero-intro').textContent = copy.heroIntro;
+  document.querySelector('.button-primary').innerHTML = copy.enter;
+  const sectionTags = document.querySelectorAll('.section-tag');
+  sectionTags[0].textContent = copy.aboutTag;
+  sectionTags[1].textContent = copy.membersTag;
+  sectionTags[2].textContent = copy.mediaTag;
+  sectionTags[3].textContent = copy.guestbookTag;
+  document.querySelector('.about h2').innerHTML = copy.aboutTitle;
+  document.querySelectorAll('.about-copy p')[0].textContent = copy.aboutOne;
+  document.querySelectorAll('.about-copy p')[1].textContent = copy.aboutTwo;
+  document.querySelector('.members h2').innerHTML = copy.membersTitle;
+  document.querySelector('.media h2').innerHTML = copy.mediaTitle;
+  document.querySelector('.media-head p').textContent = copy.mediaIntro;
+  document.querySelector('.guestbook h2').innerHTML = copy.guestbookTitle;
+  document.querySelector('.guestbook-intro').textContent = copy.guestbookIntro;
+  document.querySelector('label[for="visitor-name"]').textContent = copy.nameLabel;
+  document.querySelector('label[for="visitor-comment"]').textContent = copy.noteLabel;
+  document.querySelector('#visitor-name').placeholder = copy.namePlaceholder;
+  document.querySelector('#visitor-comment').placeholder = copy.notePlaceholder;
+  document.querySelector('.comment-form button').innerHTML = copy.post;
+  document.querySelector('.site-footer p').textContent = copy.footer;
+  document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', button.dataset.language === language));
+  if (!media.length) document.querySelector('.media-empty').textContent = copy.mediaEmpty;
+}
+
+document.querySelectorAll('[data-language]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.language)));
+
 const tabs = document.querySelector('.member-tabs');
 const detail = document.querySelector('.member-detail');
 let activeIndex = 0;
