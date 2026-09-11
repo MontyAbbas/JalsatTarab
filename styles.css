@@ -119,7 +119,7 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
 .media-title { display: grid; gap: 11px; min-width: 310px; }
 .media-player { width: 310px; aspect-ratio: 16 / 9; border: 0; background: var(--paper); }
 .media-title strong { font: 600 21px/.98 var(--serif); letter-spacing: -.05em; }
-.media-people { display: flex; flex-wrap: wrap; gap: 7px; min-width: 220px; }
+.media-title .media-people { display: flex; flex-wrap: wrap; gap: 9px; }
 .media-profile-link { padding-bottom: 3px; border-bottom: 1px solid var(--red); color: var(--red); font-size: 11px; text-decoration: none; }
 .media-profile-link:hover { color: var(--ink); border-color: var(--ink); }
 .media-watch { color: var(--ink); font: 800 10px var(--sans); letter-spacing: .1em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
@@ -205,7 +205,6 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
   .notes-head p { margin-top: 28px; }
   .media-head { display: block; }
   .media-head p { margin-top: 28px; }
-  .media-table th:nth-child(2), .media-table td:nth-child(2) { display: none; }
   .media-table td { padding-right: 12px; }
   .media-title { min-width: 240px; }
   .media-player { width: min(72vw, 310px); }
