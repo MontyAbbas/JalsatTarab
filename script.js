@@ -46,7 +46,7 @@ const media = [
     title: 'العيون فيها سلام—شرف',
     youtubeId: 'KuNto16VF78',
     url: 'https://www.youtube.com/watch?v=KuNto16VF78',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'أنا فيك عشقت—محمد',
@@ -121,6 +121,12 @@ const translations = {
     htmlLang: 'ar', direction: 'rtl', nav: ['صوتنا', 'الأعضاء', 'المواد المرئية', 'دفتر الزوار'], headerCta: 'تعرّف على السبعة <span>↗</span>', aboutTag: '01 / الإحساس', aboutTitle: 'جلسة،<br><em>لا نوع موسيقي.</em>', aboutOne: 'نلتقي بين العصر الذهبي للموسيقى السودانية، والطرب العربي، والشجن الشعري، والأغاني التي كان آباؤنا يرفعون صوتها.', aboutTwo: 'تحت كل ذلك نبض واحد: أن نصغي بعمق، ونجيب بصدق، ونترك للمجلس أن يقرر إلى أين تمضي الأغنية.', membersTag: '02 / الأشخاص', membersTitle: 'سبعة طرق<br><em>لقول الشيء نفسه.</em>', mediaTag: '03 / في التسجيل', mediaTitle: 'لحظات<br><em>مشتركة.</em>', mediaIntro: 'شاهد الفرقة وهي تغني وتعزف. كل فيديو يقودك إلى الأشخاص المشاركين فيه.', mediaEmpty: 'ستظهر الفيديوهات هنا عندما تصبح تسجيلات الفرقة جاهزة.', mediaWatch: 'شاهد على يوتيوب <span>↗</span>', guestbookTag: '04 / اترك رسالة', guestbookTitle: 'ماذا<br><em>سمعت؟</em>', guestbookIntro: 'اترك كلمة للفرقة. نراجع الرسائل قبل ظهورها هنا.', nameLabel: 'اسمك', noteLabel: 'رسالتك', namePlaceholder: 'الاسم أو الأحرف الأولى', notePlaceholder: 'اكتب ما بقي معك...', post: 'انشر الرسالة <span>↗</span>', footer: 'سبعة موسيقيين. مجلس واحد مفتوح.', next: 'العضو التالي <span>→</span>', photoEmpty: 'ستظهر صور الفرقة هنا بالتتابع.', commentEmpty: 'دفتر الزوار مفتوح. كن أول من يترك رسالة.', commentUnavailable: 'دفتر الزوار غير متاح مؤقتاً.', sending: 'جارٍ إرسال رسالتك للمراجعة...', thankYou: 'شكراً لك. رسالتك بانتظار الموافقة.', sendError: 'تعذّر إرسال الرسالة. حاول مرة أخرى.', notConnected: 'دفتر الزوار غير متصل بعد.'
   }
 };
+
+// Featured guests who are not ensemble members: English name -> Arabic name.
+const guestArabic = { 'Osama Elasad': 'أسامة الأسد' };
+function localizedGuestName(name) {
+  return document.documentElement.lang === 'ar' && guestArabic[name] ? guestArabic[name] : name;
+}
 
 function localizedMemberName(member) {
   return document.documentElement.lang === 'ar' ? memberArabic[member.name].name : member.name;
@@ -239,7 +245,8 @@ function renderMedia() {
   mediaList.innerHTML = media.map((video) => {
     const people = video.members.map((memberName) => {
       const memberIndex = members.findIndex(member => member.name === memberName);
-      return `<a class="media-profile-link" href="#members" data-member-index="${memberIndex}">${memberIndex >= 0 ? localizedMemberName(members[memberIndex]) : memberName}</a>`;
+      if (memberIndex < 0) return `<span class="media-guest" data-guest="${memberName}">${localizedGuestName(memberName)}</span>`;
+      return `<a class="media-profile-link" href="#members" data-member-index="${memberIndex}">${localizedMemberName(members[memberIndex])}</a>`;
     }).join('');
     return `<li class="media-card"><iframe class="media-player" src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong dir="auto">${video.title}</strong><div class="media-people">${people}</div><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">${translations[document.documentElement.lang].mediaWatch}</a></li>`;
   }).join('');
@@ -259,6 +266,7 @@ function localizeMedia(copy) {
     const memberIndex = Number(link.dataset.memberIndex);
     if (memberIndex >= 0) link.textContent = localizedMemberName(members[memberIndex]);
   });
+  mediaList.querySelectorAll('.media-guest').forEach((guest) => { guest.textContent = localizedGuestName(guest.dataset.guest); });
   mediaList.querySelectorAll('.media-watch').forEach((link) => { link.innerHTML = copy.mediaWatch; });
 }
 

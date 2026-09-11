@@ -98,6 +98,7 @@ h2 { margin: 0; font: 600 clamp(2.6rem, 5vw, 5.4rem)/.88 var(--serif); letter-sp
 .media-people { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .media-profile-link { padding-bottom: 3px; border-bottom: 1px solid var(--red); color: var(--red); font-size: 11px; text-decoration: none; }
 .media-profile-link:hover { color: var(--ink); border-color: var(--ink); }
+.media-guest { padding-bottom: 3px; border-bottom: 1px dotted var(--soft-ink); color: var(--soft-ink); font-size: 11px; }
 .media-watch { justify-self: start; margin-top: 4px; color: var(--ink); font: 800 10px var(--sans); letter-spacing: .1em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
 .media-watch span { margin-left: 10px; color: var(--red); font-size: 16px; }
 .media-empty { grid-column: 1 / -1; padding: 25px 0; color: var(--soft-ink); font: italic 18px var(--serif); }
