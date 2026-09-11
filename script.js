@@ -82,7 +82,7 @@ const media = [
     title: 'أنا فيك عشقت—محمد',
     youtubeId: 'fxlgvdJ45-g',
     url: 'https://www.youtube.com/watch?v=fxlgvdJ45-g',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'طريقة دايما فارشو ورد—محمد',
