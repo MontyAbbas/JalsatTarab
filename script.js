@@ -10,9 +10,35 @@ const members = [
 
 const totalMembers = members.length;
 
+// Add videos here with the YouTube URL and the member names who appear in them.
+const media = [];
+
 const tabs = document.querySelector('.member-tabs');
 const detail = document.querySelector('.member-detail');
 let activeIndex = 0;
+
+const mediaList = document.querySelector('.media-list');
+
+function renderMedia() {
+  if (!media.length) {
+    mediaList.innerHTML = '<tr><td class="media-empty" colspan="3">Videos will appear here when the ensemble’s recordings are ready.</td></tr>';
+    return;
+  }
+  mediaList.innerHTML = media.map((video) => {
+    const people = video.members.map((memberName) => {
+      const memberIndex = members.findIndex(member => member.name === memberName);
+      return `<a class="media-profile-link" href="#members" data-member-index="${memberIndex}">${memberName}</a>`;
+    }).join('');
+    return `<tr><td><div class="media-title"><img class="media-thumb" src="https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg" alt=""><strong>${video.title}</strong></div></td><td><div class="media-people">${people}</div></td><td><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">Watch <span>↗</span></a></td></tr>`;
+  }).join('');
+  mediaList.querySelectorAll('.media-profile-link').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      selectMember(Number(link.dataset.memberIndex));
+      document.querySelector('#members').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
 
 const commentForm = document.querySelector('.comment-form');
 const commentList = document.querySelector('.comment-list');
@@ -125,3 +151,4 @@ function selectMember(index) {
 
 detail.querySelector('.next-member').addEventListener('click', () => selectMember((activeIndex + 1) % members.length));
 selectMember(0);
+renderMedia();
