@@ -42,7 +42,7 @@ h1 em, h2 em { color: var(--red); font-style: italic; }
 .button-primary span { color: var(--red); font-size: 19px; }
 .hero-art { height: min(61vw, 670px); min-height: 430px; position: relative; }
 .sun { position: absolute; top: 4%; right: 9%; width: 62%; aspect-ratio: 1; border-radius: 50%; background: var(--paper-deep); }
-.hero-photo { position: absolute; inset: 6% 13% 3% 0; background: linear-gradient(90deg, rgba(168,68,53,.3), transparent 55%), url('https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1000&q=85') center/cover; filter: grayscale(1) contrast(1.12); mix-blend-mode: multiply; clip-path: polygon(17% 0, 100% 7%, 88% 100%, 0 91%); }
+.hero-photo { position: absolute; inset: 3% 13% 0 0; background: linear-gradient(90deg, rgba(35,33,30,.08), transparent 55%), url('Jalsat%20Tarab.png') center/contain no-repeat; filter: contrast(1.05); clip-path: none; }
 .hero-ring { position: absolute; border: 1px solid var(--red); border-radius: 50%; aspect-ratio: 1; }
 .ring-one { top: 16%; left: -6%; width: 72%; }
 .ring-two { right: 1%; bottom: 0; width: 37%; border-color: var(--ink); }
@@ -166,7 +166,7 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
 [dir="rtl"] .hero, [dir="rtl"] .about-grid, [dir="rtl"] .member-layout, [dir="rtl"] .guestbook-grid { direction: rtl; }
 [dir="rtl"] .hero-copy, [dir="rtl"] .member-info, [dir="rtl"] .about-copy, [dir="rtl"] .guestbook { text-align: right; }
 [dir="rtl"] .hero:before { right: auto; left: -3vw; }
-[dir="rtl"] .hero-photo { background: linear-gradient(270deg, rgba(168,68,53,.3), transparent 55%), url('https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1000&q=85') center/cover; }
+[dir="rtl"] .hero-photo { background: linear-gradient(270deg, rgba(35,33,30,.08), transparent 55%), url('Jalsat%20Tarab.png') center/contain no-repeat; }
 [dir="rtl"] .member-info blockquote { padding-left: 0; padding-right: 17px; border-left: 0; border-right: 2px solid var(--red); }
 [dir="rtl"] .media-table { text-align: right; }
 [dir="rtl"] .media-table td { padding-left: 20px; padding-right: 0; }
