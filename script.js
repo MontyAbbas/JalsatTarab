@@ -35,7 +35,14 @@ const memberArabic = {
 };
 
 // Add videos here with the YouTube URL and the member names who appear in them.
-const media = [];
+const media = [
+  {
+    title: 'Jalsat Tarab performance',
+    youtubeId: 'TfEayDvVOJs',
+    url: 'https://www.youtube.com/watch?v=TfEayDvVOJs',
+    members: ['Montasir Abbas', 'Tawfieg Osman', 'Alhawi']
+  }
+];
 
 // Add each picture here when supplied: { image, title, detail }.
 const rollingPictures = [];
