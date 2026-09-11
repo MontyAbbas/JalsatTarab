@@ -10,6 +10,20 @@ const members = [
 
 const totalMembers = members.length;
 
+const fallingNotes = document.querySelector('.falling-notes');
+const noteGlyphs = ['♪', '♫', '♩', '♬', '♪', '♩', '♫', '♪'];
+noteGlyphs.forEach((glyph, index) => {
+  const note = document.createElement('span');
+  note.className = 'falling-note';
+  note.textContent = glyph;
+  note.style.left = `${8 + (index * 13) % 88}%`;
+  note.style.setProperty('--fall-duration', `${22 + (index % 4) * 5}s`);
+  note.style.setProperty('--fall-delay', `${-index * 3.7}s`);
+  note.style.setProperty('--fall-drift', `${index % 2 ? 46 : -38}px`);
+  note.style.setProperty('--fall-rotation', `${-18 + index * 9}deg`);
+  fallingNotes.appendChild(note);
+});
+
 const memberArabic = {
   'Tawfieg Osman': { name: 'توفيق عثمان', role: 'عضو في الفرقة', bio: 'هذا الملف جاهز لإضافة دور توفيق وخلفيته وقصته الموسيقية.', tags: ['الملف قيد الإعداد'], quote: 'أضف كلمات توفيق هنا.' },
   'Montasir Abbas': { name: 'منتصر عباس', role: 'غناء رئيسي · عود', bio: 'بدأ منتصر عزف العود بالطريقة السودانية في أواخر الثمانينيات. وخلال العقد الماضي تعلّم مقامات الموسيقى العربية على يد سايمون شاهين وشربل روحانا وعيسى بولس وغيرهم، مع استماع متواصل إلى هاشم ميرغني.', tags: ['العصر الذهبي السوداني', 'الحقيبة', 'العربي الحديث'], facts: [['من', 'أم درمان، السودان'], ['المقامات', 'نهاوند، كرد، خماسي'], ['اللغات', 'السودانية، المصرية، الخليجية'], ['الآلة', 'العود'], ['مناسبة', 'SASF 2026']], quote: 'أحب العود والموسيقى والشعر.' },
