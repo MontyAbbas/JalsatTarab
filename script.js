@@ -158,8 +158,7 @@ function setLanguage(language) {
   document.querySelector('.comment-form button').innerHTML = copy.post;
   document.querySelector('.next-member').innerHTML = copy.next;
   document.querySelector('.site-footer p').textContent = copy.footer;
-  document.querySelectorAll('.footer-links a')[0].textContent = language === 'ar' ? 'إنستغرام ↗' : 'Instagram ↗';
-  document.querySelectorAll('.footer-links a')[1].textContent = language === 'ar' ? 'تواصل ↗' : 'Contact ↗';
+  document.querySelector('.footer-links a').textContent = language === 'ar' ? 'تواصل ↗' : 'Contact ↗';
   renderPhoto(photoIndex);
   document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', button.dataset.language === language));
   localizeMedia(copy);
