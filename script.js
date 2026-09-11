@@ -302,7 +302,9 @@ function renderComments(comments) {
   });
 }
 
-async function loadComments() {
+// The Apps Script endpoint occasionally stalls or returns an error page,
+// so retry a few times before showing the "unavailable" message (same as Diwan).
+async function loadComments(attempt = 1) {
   if (!COMMENTS_ENDPOINT) {
     renderComments([]);
     return;
@@ -310,8 +312,10 @@ async function loadComments() {
   try {
     const response = await fetch(`${COMMENTS_ENDPOINT}?action=list&poem=${encodeURIComponent(COMMENTS_STREAM)}`);
     const data = await response.json();
-    renderComments(data.ok ? data.comments : []);
+    if (!data.ok || !Array.isArray(data.comments)) throw new Error('Bad response');
+    renderComments(data.comments);
   } catch (error) {
+    if (attempt < 3) return loadComments(attempt + 1);
     commentList.innerHTML = `<p class="comment-empty">${translations[document.documentElement.lang].commentUnavailable}</p>`;
   }
 }
@@ -329,15 +333,16 @@ commentForm.addEventListener('submit', (event) => {
   const formData = new FormData(commentForm);
   const name = formData.get('name').trim();
   const comment = formData.get('comment').trim();
+  const website = (formData.get('website') || '').trim();
   if (!name || !comment) return;
   const submitButton = commentForm.querySelector('button[type="submit"]');
   submitButton.disabled = true;
   commentStatus.textContent = translations[document.documentElement.lang].sending;
   fetch(COMMENTS_ENDPOINT, {
     method: 'POST',
-    body: new URLSearchParams({ action: 'submit', name, message: comment, poem: COMMENTS_STREAM, title: 'Jalsat Tarab guestbook', website: '' })
-  }).then(response => response.json()).then(data => {
-    if (!data.ok) throw new Error('Comment submission failed');
+    body: new URLSearchParams({ action: 'submit', name, message: comment, poem: COMMENTS_STREAM, title: 'Jalsat Tarab guestbook', website })
+  }).then(response => response.json().catch(() => null)).then(data => {
+    if (!data || !data.ok) throw new Error('Comment submission failed');
     commentForm.reset();
     characterCount.textContent = '0 / 280';
     commentStatus.textContent = translations[document.documentElement.lang].thankYou;

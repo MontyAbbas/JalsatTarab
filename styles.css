@@ -119,6 +119,7 @@ h2 { margin: 0; font: 600 clamp(2.6rem, 5vw, 5.4rem)/.88 var(--serif); letter-sp
 .guestbook-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 10vw; }
 .guestbook-intro { max-width: 230px; margin-top: 18px; color: var(--soft-ink); font-size: 12px; line-height: 1.7; }
 .comment-form { max-width: 520px; }
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .comment-form label { display: block; margin: 0 0 8px; color: var(--red); font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
 .comment-form input, .comment-form textarea { width: 100%; margin: 0 0 18px; padding: 12px 0; border: 0; border-bottom: 1px solid var(--line); outline: 0; resize: vertical; color: var(--ink); background: transparent; font: 14px/1.5 var(--sans); }
 .comment-form input:focus, .comment-form textarea:focus { border-color: var(--red); }

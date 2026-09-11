@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260911c" />
+  <link rel="stylesheet" href="styles.css?v=20260911d" />
 </head>
 <body>
   <div class="grain"></div>
@@ -67,6 +67,7 @@
           <form class="comment-form">
             <label for="visitor-name">Your name</label>
             <input id="visitor-name" name="name" type="text" maxlength="40" placeholder="A name or initials" required />
+            <input class="honeypot" name="website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <label for="visitor-comment">Your note</label>
             <textarea id="visitor-comment" name="comment" rows="4" maxlength="280" placeholder="Tell us what stayed with you..." required></textarea>
             <div class="comment-form-footer"><span class="character-count">0 / 280</span><button type="submit">Post note <span>↗</span></button></div>
@@ -79,6 +80,6 @@
   </main>
 
   <footer class="site-footer"><div class="footer-brand">Jalsat <i>Tarab</i></div><p>Seven musicians. One open room.</p><div class="footer-links"><a href="#top">Instagram ↗</a><a href="#members">Contact ↗</a><span>© 2026</span></div></footer>
-  <script src="script.js?v=20260911k"></script>
+  <script src="script.js?v=20260911l"></script>
 </body>
 </html>
