@@ -94,7 +94,7 @@ const media = [
     title: 'بخاف—محمد',
     youtubeId: 'g_54Pt3Q7Yw',
     url: 'https://www.youtube.com/watch?v=g_54Pt3Q7Yw',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'أسمعنا مرة—شرف',
