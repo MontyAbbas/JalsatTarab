@@ -37,15 +37,69 @@ const memberArabic = {
 // Add videos here with the YouTube URL and the member names who appear in them.
 const media = [
   {
-    title: 'Jalsat Tarab performance',
+    title: 'إمتى أرجع لأمدر و أعوده—توفيق و منتصر',
     youtubeId: 'TfEayDvVOJs',
     url: 'https://www.youtube.com/watch?v=TfEayDvVOJs',
     members: ['Montasir Abbas', 'Tawfieg Osman', 'Alhawi']
   },
   {
-    title: 'Jalsat Tarab performance',
+    title: 'العيون فيها سلام—شرف',
     youtubeId: 'KuNto16VF78',
     url: 'https://www.youtube.com/watch?v=KuNto16VF78',
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'أنا فيك عشقت—محمد',
+    youtubeId: 'rC8z3XWvdjg',
+    url: 'https://www.youtube.com/watch?v=rC8z3XWvdjg',
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'كلمني يا حلو العيون—توفيق',
+    youtubeId: 'GUNiEn1rlV8',
+    url: 'https://www.youtube.com/watch?v=GUNiEn1rlV8&t=34s',
+    members: ['Tawfieg Osman', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'قول النصيحة—شرف',
+    youtubeId: 'qe0P2UKyOnw',
+    url: 'https://www.youtube.com/watch?v=qe0P2UKyOnw',
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Tawfieg Osman']
+  },
+  {
+    title: 'يا ناعم العود—توفيق و منتصر',
+    youtubeId: 'awbDeGfdtw0',
+    url: 'https://www.youtube.com/watch?v=awbDeGfdtw0',
+    members: ['Tawfieg Osman', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'أحلى جارة—شرف',
+    youtubeId: '2ViOU2hIVP4',
+    url: 'https://www.youtube.com/watch?v=2ViOU2hIVP4',
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'أنا فيك عشقت—محمد',
+    youtubeId: 'fxlgvdJ45-g',
+    url: 'https://www.youtube.com/watch?v=fxlgvdJ45-g',
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'طريقة دايما فارشو ورد—محمد',
+    youtubeId: '18d_pdq6_qM',
+    url: 'https://www.youtube.com/watch?v=18d_pdq6_qM',
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'بخاف—محمد',
+    youtubeId: 'g_54Pt3Q7Yw',
+    url: 'https://www.youtube.com/watch?v=g_54Pt3Q7Yw',
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+  },
+  {
+    title: 'أسمعنا مرة—شرف',
+    youtubeId: 'KQotEpE_TR0',
+    url: 'https://www.youtube.com/watch?v=KQotEpE_TR0',
     members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
   }
 ];
@@ -187,7 +241,7 @@ function renderMedia() {
       const memberIndex = members.findIndex(member => member.name === memberName);
       return `<a class="media-profile-link" href="#members" data-member-index="${memberIndex}">${memberIndex >= 0 ? localizedMemberName(members[memberIndex]) : memberName}</a>`;
     }).join('');
-    return `<tr><td><div class="media-title"><iframe class="media-player" src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong>${video.title}</strong><div class="media-people">${people}</div></div></td><td><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">Open on YouTube <span>↗</span></a></td></tr>`;
+    return `<tr><td><div class="media-title"><iframe class="media-player" src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong dir="auto">${video.title}</strong><div class="media-people">${people}</div></div></td><td><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">Open on YouTube <span>↗</span></a></td></tr>`;
   }).join('');
   mediaList.querySelectorAll('.media-profile-link').forEach((link) => {
     link.addEventListener('click', (event) => {
