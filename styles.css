@@ -56,7 +56,7 @@ h1 em, h2 em { color: var(--red); font-style: italic; }
 .photo-banner { position: relative; overflow: hidden; background: var(--ink); color: var(--paper); }
 .photo-banner-stage { min-height: 200px; }
 .photo-slide { position: relative; min-height: 300px; animation: photo-in .7s ease both; }
-.photo-slide img { width: 100%; height: min(52vw, 560px); min-height: 300px; display: block; object-fit: cover; filter: grayscale(1); opacity: .78; }
+.photo-slide img { width: 100%; height: min(40vw, 460px); min-height: 280px; display: block; object-fit: cover; filter: grayscale(1); opacity: .78; }
 .photo-slide:after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(35,33,30,.6), transparent 65%); pointer-events: none; }
 .photo-slide figcaption { position: absolute; z-index: 1; left: 8vw; bottom: 45px; max-width: 360px; color: var(--paper); }
 .photo-slide figcaption strong { display: block; margin-bottom: 8px; font: italic 600 clamp(2rem, 4vw, 4rem)/.95 var(--serif); }
