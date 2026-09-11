@@ -32,28 +32,8 @@ a { color: inherit; }
 .language-toggle button[aria-pressed="true"] { background: var(--red); color: var(--paper-dark); }
 .header-cta { padding-bottom: 5px; border-bottom: 1px solid var(--ink); }
 .header-cta span, .text-link span { margin-left: 8px; font-size: 17px; }
-.hero { padding: 4vw 10vw 3.5vw; display: grid; grid-template-columns: .9fr 1.1fr; gap: 8vw; align-items: center; position: relative; overflow: hidden; background: var(--paper); }
-.hero:before { content: 'JALSAT TARAB'; position: absolute; top: 18%; right: -3vw; color: rgba(242, 233, 212, .05); font: 800 clamp(5rem, 15vw, 15rem)/.8 var(--sans); letter-spacing: -.1em; transform: rotate(90deg); transform-origin: center; }
-.hero-copy { position: relative; z-index: 1; }
-.eyebrow, .section-tag, .member-role, .member-meta, .member-count, .note-grid span { font-family: var(--mono); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
-.eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 20px; color: var(--red); }
-.pulse { width: 7px; height: 7px; border: 1px solid var(--red); border-radius: 50%; }
-h1 { max-width: 720px; margin: 0 0 26px; font: 600 clamp(3.4rem, 7.4vw, 7.6rem)/.86 var(--serif); letter-spacing: -.09em; }
-h1 em, h2 em { color: var(--red); font-style: italic; }
-.hero-intro { max-width: 315px; margin-bottom: 22px; color: var(--soft-ink); font-size: 13px; line-height: 1.75; }
-.button { display: inline-flex; align-items: center; gap: 35px; padding: 13px 0; border-bottom: 1px solid var(--ink); color: var(--ink); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; }
-.button-primary { background: none; }
-.button-primary span { color: var(--red); font-size: 19px; }
-.hero-art { height: min(48vw, 520px); min-height: 360px; position: relative; }
-.sun { position: absolute; top: 4%; right: 9%; width: 62%; aspect-ratio: 1; border-radius: 50%; background: var(--paper-deep); }
-.hero-photo { position: absolute; inset: 3% 13% 0 0; background: linear-gradient(90deg, rgba(15,43,32,.35), transparent 55%), url('Jalsat%20Tarab.png') center/contain no-repeat; filter: contrast(1.05); clip-path: none; }
-.hero-ring { position: absolute; border: 1px solid var(--red); border-radius: 50%; aspect-ratio: 1; }
-.ring-one { top: 16%; left: -6%; width: 72%; }
-.ring-two { right: 1%; bottom: 0; width: 37%; border-color: var(--ink); }
-.vertical-label { position: absolute; top: 35%; right: -20px; color: var(--soft-ink); writing-mode: vertical-rl; font: 10px var(--mono); letter-spacing: .2em; }
-.hero-caption { position: absolute; left: 0; bottom: 0; display: flex; align-items: center; gap: 11px; color: var(--soft-ink); font: 10px var(--mono); }
-.hero-caption i { width: 45px; height: 1px; background: var(--red); }
-.hero-caption b { margin-left: 12px; color: var(--ink); font: 500 11px/1.2 var(--sans); }
+.section-tag, .member-role, .member-meta, .member-count, .note-grid span { font-family: var(--mono); font-size: 10px; letter-spacing: .13em; text-transform: uppercase; }
+h2 em { color: var(--red); font-style: italic; }
 .photo-banner { position: relative; overflow: hidden; background: var(--paper-dark); color: var(--ink); }
 .photo-banner-stage { min-height: 200px; }
 .photo-slide { position: relative; min-height: 300px; animation: photo-in .7s ease both; }
@@ -162,10 +142,8 @@ h2 { margin: 0; font: 600 clamp(2.6rem, 5vw, 5.4rem)/.88 var(--serif); letter-sp
 .footer-links span { opacity: .5; }
 [dir="rtl"] { direction: rtl; }
 [dir="rtl"] .site-header, [dir="rtl"] .site-footer { direction: rtl; }
-[dir="rtl"] .hero, [dir="rtl"] .about-grid, [dir="rtl"] .member-layout, [dir="rtl"] .guestbook-grid { direction: rtl; }
-[dir="rtl"] .hero-copy, [dir="rtl"] .member-info, [dir="rtl"] .about-copy, [dir="rtl"] .guestbook { text-align: right; }
-[dir="rtl"] .hero:before { right: auto; left: -3vw; }
-[dir="rtl"] .hero-photo { background: linear-gradient(270deg, rgba(15,43,32,.35), transparent 55%), url('Jalsat%20Tarab.png') center/contain no-repeat; }
+[dir="rtl"] .about-grid, [dir="rtl"] .member-layout, [dir="rtl"] .guestbook-grid { direction: rtl; }
+[dir="rtl"] .member-info, [dir="rtl"] .about-copy, [dir="rtl"] .guestbook { text-align: right; }
 [dir="rtl"] .member-info blockquote { padding-left: 0; padding-right: 17px; border-left: 0; border-right: 2px solid var(--red); }
 [dir="rtl"] .media-watch span { margin-left: 0; margin-right: 10px; }
 [dir="rtl"] .member-tab { text-align: right; }
@@ -177,12 +155,9 @@ h2 { margin: 0; font: 600 clamp(2.6rem, 5vw, 5.4rem)/.88 var(--serif); letter-sp
   .nav { display: none; }
   .header-cta { font-size: 10px; }
   .language-toggle { margin-left: auto; margin-right: 12px; }
-  .hero { display: block; padding: 40px 9vw 30px; }
   h1 { font-size: clamp(3.7rem, 16vw, 6rem); }
-  .hero-art { height: 340px; min-height: 0; margin-top: 20px; }
   .photo-slide figcaption { left: 9vw; bottom: 75px; }
   .photo-banner-controls { right: 9vw; bottom: 25px; }
-  .vertical-label { right: -10px; }
   .section-wrap { padding: 52px 9vw; }
   .about-grid, .member-detail { grid-template-columns: 1fr; gap: 35px; }
   .about-copy { padding: 0; }
