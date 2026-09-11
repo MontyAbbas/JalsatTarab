@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Jalsat Tarab — a living room for Arabic music, memory, and improvisation." />
+  <title>Jalsat Tarab | Between the Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Jalsat Tarab home"><span class="brand-mark">JT</span><span>Jalsat<br><i>Tarab</i></span></a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#about">Our sound</a>
+      <a href="#members">The ensemble</a>
+      <a href="#notes">Notes</a>
+      <a href="#guestbook">Guestbook</a>
+    </nav>
+    <a class="header-cta" href="#members">Meet the seven <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse"></span> An ensemble in conversation</p>
+        <h1>Music you<br /><em>feel</em> before<br />you name it.</h1>
+        <p class="hero-intro">Jalsat Tarab is a circle of seven musicians keeping the old songs close, and leaving room for something new.</p>
+        <a href="#members" class="button button-primary">Enter the majlis <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-label="Abstract portrait of a musician with oud">
+        <div class="sun"></div>
+        <div class="hero-ring ring-one"></div>
+        <div class="hero-ring ring-two"></div>
+        <div class="hero-photo"></div>
+        <div class="vertical-label">صوت • ذاكرة • حال</div>
+        <div class="hero-caption"><span>01</span><i></i><span>07</span><b>members<br />in one room</b></div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Jalsat Tarab themes">
+      <div class="ticker-track"><span>طرب</span><b>✳</b><span>Memory in motion</span><b>✳</b><span>مقام</span><b>✳</b><span>Late-night songs</span><b>✳</b><span>طرب</span><b>✳</b><span>Memory in motion</span><b>✳</b><span>مقام</span><b>✳</b><span>Late-night songs</span><b>✳</b></div>
+    </div>
+
+    <section class="about section-wrap" id="about">
+      <div class="section-tag">01 / The feeling</div>
+      <div class="about-grid">
+        <h2>A gathering,<br /><em>not a genre.</em></h2>
+        <div class="about-copy"><p>We meet somewhere between Sudanese golden age, Egyptian tarab, Levantine longing, and the songs our parents played too loud.</p><p>There is a pulse underneath it all: listen deeply, answer honestly, and let the room decide where the song goes next.</p><a class="text-link" href="#notes">Read our notebook <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="members section-wrap" id="members">
+      <div class="members-heading"><div><div class="section-tag">02 / The people</div><h2>Seven ways to<br /><em>say the same thing.</em></h2></div><p class="member-count">01 <span>/</span> 07</p></div>
+      <div class="member-layout">
+        <div class="member-tabs" role="tablist" aria-label="Ensemble members"></div>
+        <article class="member-detail" aria-live="polite">
+          <div class="member-image"><img src="" alt="" /><span class="image-index">01</span><span class="image-stamp">Jalsat<br />Tarab</span></div>
+          <div class="member-info"><p class="member-role"></p><h3></h3><p class="member-bio"></p><div class="member-meta"></div><blockquote></blockquote><button class="next-member" type="button">Next member <span>→</span></button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="notes section-wrap" id="notes">
+      <div class="section-tag">03 / From the notebook</div>
+      <div class="notes-head"><h2>Small notes,<br /><em>big feeling.</em></h2><p>Fragments from rehearsals, roads, and the spaces between songs.</p></div>
+      <div class="note-grid"><article><span>01 — Rehearsal</span><h3>Leave one window open.</h3><p>Every arrangement needs a place for the unexpected to enter.</p><a href="#members">Read fragment ↗</a></article><article><span>02 — Listening</span><h3>The pause is part of the melody.</h3><p>Sometimes the room sings back before anyone makes a sound.</p><a href="#about">Read fragment ↗</a></article><article class="note-image"><div><span>03 — Field note</span><h3>After midnight,<br />the maqam moves.</h3></div></article></div>
+    </section>
+
+    <section class="guestbook section-wrap" id="guestbook">
+      <div class="section-tag">04 / Leave a note</div>
+      <div class="guestbook-grid">
+        <div><h2>What did<br /><em>you hear?</em></h2><p class="guestbook-intro">Leave a thought for the ensemble. Notes are reviewed before they appear here.</p></div>
+        <div>
+          <form class="comment-form">
+            <label for="visitor-name">Your name</label>
+            <input id="visitor-name" name="name" type="text" maxlength="40" placeholder="A name or initials" required />
+            <label for="visitor-comment">Your note</label>
+            <textarea id="visitor-comment" name="comment" rows="4" maxlength="280" placeholder="Tell us what stayed with you..." required></textarea>
+            <div class="comment-form-footer"><span class="character-count">0 / 280</span><button type="submit">Post note <span>↗</span></button></div>
+            <p class="comment-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="comment-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand">Jalsat <i>Tarab</i></div><p>Seven musicians. One open room.</p><div class="footer-links"><a href="#top">Instagram ↗</a><a href="#members">Contact ↗</a><span>© 2026</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
