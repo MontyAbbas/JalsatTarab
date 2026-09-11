@@ -88,7 +88,7 @@ const media = [
     title: 'طريقة دايما فارشو ورد—محمد',
     youtubeId: '18d_pdq6_qM',
     url: 'https://www.youtube.com/watch?v=18d_pdq6_qM',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'بخاف—محمد',
