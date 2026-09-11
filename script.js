@@ -11,14 +11,14 @@ const members = [
 const totalMembers = members.length;
 
 const fallingNotes = document.querySelector('.falling-notes');
-const noteGlyphs = ['♪', '♫', '♩', '♬', '♪', '♩', '♫', '♪'];
+const noteGlyphs = ['♪', '♫', '♩', '♬', '♪', '♩', '♫', '♪', '♬', '♫', '♪', '♩', '♫', '♪'];
 noteGlyphs.forEach((glyph, index) => {
   const note = document.createElement('span');
   note.className = 'falling-note';
   note.textContent = glyph;
-  note.style.left = `${8 + (index * 13) % 88}%`;
-  note.style.setProperty('--fall-duration', `${22 + (index % 4) * 5}s`);
-  note.style.setProperty('--fall-delay', `${-index * 3.7}s`);
+  note.style.left = `${4 + (index * 29) % 92}%`;
+  note.style.setProperty('--fall-duration', `${16 + (index % 4) * 4}s`);
+  note.style.setProperty('--fall-delay', `${-index * 2.3}s`);
   note.style.setProperty('--fall-drift', `${index % 2 ? 46 : -38}px`);
   note.style.setProperty('--fall-rotation', `${-18 + index * 9}deg`);
   fallingNotes.appendChild(note);
