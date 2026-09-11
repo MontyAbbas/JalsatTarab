@@ -70,7 +70,7 @@ const media = [
     title: 'يا ناعم العود—توفيق و منتصر',
     youtubeId: 'awbDeGfdtw0',
     url: 'https://www.youtube.com/watch?v=awbDeGfdtw0',
-    members: ['Tawfieg Osman', 'Montasir Abbas', 'Alhawi']
+    members: ['Tawfieg Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'أحلى جارة—شرف',
