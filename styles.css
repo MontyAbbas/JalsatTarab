@@ -81,6 +81,10 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
 .member-bio { max-width: 465px; margin-bottom: 26px; color: var(--soft-ink); font-size: 14px; line-height: 1.75; }
 .member-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
 .member-meta span { padding: 7px 9px; border: 1px solid var(--line); font-size: 9px; }
+.member-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px 24px; max-width: 520px; margin-bottom: 28px; }
+.member-fact { display: grid; gap: 4px; }
+.member-fact dt { color: var(--red); font: 9px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.member-fact dd { margin: 0; color: var(--soft-ink); font-size: 12px; line-height: 1.45; }
 .member-info blockquote { max-width: 420px; margin: 0 0 29px; padding-left: 17px; border-left: 2px solid var(--red); font: italic 19px/1.35 var(--serif); }
 .next-member { padding: 0 0 6px; border: 0; border-bottom: 1px solid var(--ink); background: none; cursor: pointer; font: 800 10px var(--sans); letter-spacing: .12em; text-transform: uppercase; }
 .next-member span { margin-left: 28px; color: var(--red); font-size: 19px; }
@@ -142,6 +146,7 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
   .member-tab.active { padding-left: 8px; }
   .member-image { max-width: 350px; }
   .member-info h3 { font-size: 3rem; }
+  .member-facts { grid-template-columns: 1fr; }
   .notes-head { display: block; }
   .notes-head p { margin-top: 28px; }
   .note-grid { grid-template-columns: 1fr; }
