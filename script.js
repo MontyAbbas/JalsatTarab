@@ -41,6 +41,12 @@ const media = [
     youtubeId: 'TfEayDvVOJs',
     url: 'https://www.youtube.com/watch?v=TfEayDvVOJs',
     members: ['Montasir Abbas', 'Tawfieg Osman', 'Alhawi']
+  },
+  {
+    title: 'Jalsat Tarab performance',
+    youtubeId: 'KuNto16VF78',
+    url: 'https://www.youtube.com/watch?v=KuNto16VF78',
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
   }
 ];
 
