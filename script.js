@@ -76,7 +76,7 @@ const media = [
     title: 'أحلى جارة—شرف',
     youtubeId: '2ViOU2hIVP4',
     url: 'https://www.youtube.com/watch?v=2ViOU2hIVP4',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   },
   {
     title: 'أنا فيك عشقت—محمد',
