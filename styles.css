@@ -110,21 +110,16 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
 .media { background: var(--paper-deep); }
 .media-head { display: flex; align-items: end; justify-content: space-between; margin-bottom: 58px; }
 .media-head p { width: 270px; margin: 0; color: var(--soft-ink); font-size: 12px; line-height: 1.7; }
-.media-table-wrap { overflow-x: auto; }
-.media-table { width: 100%; border-collapse: collapse; text-align: left; }
-.media-table th { padding: 0 0 14px; color: var(--red); font: 10px var(--mono); letter-spacing: .12em; text-transform: uppercase; }
-.media-table td { padding: 20px 20px 20px 0; vertical-align: middle; font-size: 13px; }
-.media-table tbody tr { border-top: 1px solid var(--line); }
-.media-table tbody tr:last-child { border-bottom: 1px solid var(--line); }
-.media-title { display: grid; gap: 11px; min-width: 310px; }
-.media-player { width: 310px; aspect-ratio: 16 / 9; border: 0; background: var(--paper); }
-.media-title strong { font: 600 21px/.98 var(--serif); letter-spacing: -.05em; }
-.media-title .media-people { display: flex; flex-wrap: wrap; gap: 9px; }
+.media-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 40px 28px; margin: 0; padding: 0; list-style: none; }
+.media-card { display: grid; gap: 11px; align-content: start; }
+.media-player { width: 100%; aspect-ratio: 16 / 9; border: 0; background: var(--paper); }
+.media-card strong { font: 600 19px/1.05 var(--serif); letter-spacing: -.04em; }
+.media-people { display: flex; flex-wrap: wrap; gap: 8px 10px; }
 .media-profile-link { padding-bottom: 3px; border-bottom: 1px solid var(--red); color: var(--red); font-size: 11px; text-decoration: none; }
 .media-profile-link:hover { color: var(--ink); border-color: var(--ink); }
-.media-watch { color: var(--ink); font: 800 10px var(--sans); letter-spacing: .1em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
+.media-watch { justify-self: start; margin-top: 4px; color: var(--ink); font: 800 10px var(--sans); letter-spacing: .1em; text-decoration: none; text-transform: uppercase; white-space: nowrap; }
 .media-watch span { margin-left: 10px; color: var(--red); font-size: 16px; }
-.media-empty { padding: 25px 0 !important; color: var(--soft-ink); font: italic 18px var(--serif); }
+.media-empty { grid-column: 1 / -1; padding: 25px 0; color: var(--soft-ink); font: italic 18px var(--serif); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .notes { background: var(--paper-deep); }
 .notes-head { display: flex; align-items: end; justify-content: space-between; margin-bottom: 60px; }
@@ -171,8 +166,6 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
 [dir="rtl"] .hero:before { right: auto; left: -3vw; }
 [dir="rtl"] .hero-photo { background: linear-gradient(270deg, rgba(35,33,30,.08), transparent 55%), url('Jalsat%20Tarab.png') center/contain no-repeat; }
 [dir="rtl"] .member-info blockquote { padding-left: 0; padding-right: 17px; border-left: 0; border-right: 2px solid var(--red); }
-[dir="rtl"] .media-table { text-align: right; }
-[dir="rtl"] .media-table td { padding-left: 20px; padding-right: 0; }
 [dir="rtl"] .media-watch span { margin-left: 0; margin-right: 10px; }
 [dir="rtl"] .member-tab { text-align: right; }
 [dir="rtl"] .member-tab.active { padding-left: 3px; padding-right: 15px; }
@@ -205,10 +198,8 @@ h2 { margin: 0; font: 600 clamp(3rem, 6vw, 6.5rem)/.88 var(--serif); letter-spac
   .notes-head p { margin-top: 28px; }
   .media-head { display: block; }
   .media-head p { margin-top: 28px; }
-  .media-table td { padding-right: 12px; }
-  .media-title { min-width: 240px; }
-  .media-player { width: min(72vw, 310px); }
-  .media-title strong { font-size: 18px; }
+  .media-grid { grid-template-columns: 1fr; gap: 34px; }
+  .media-card strong { font-size: 18px; }
   .note-grid { grid-template-columns: 1fr; }
   .note-grid article { min-height: 200px; }
   .guestbook-grid { grid-template-columns: 1fr; gap: 45px; }

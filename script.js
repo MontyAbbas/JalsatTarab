@@ -109,10 +109,10 @@ const rollingPictures = [];
 
 const translations = {
   en: {
-    htmlLang: 'en', direction: 'ltr', nav: ['Our sound', 'The ensemble', 'Media', 'Guestbook'], headerCta: 'Meet the seven <span>↗</span>', eyebrow: 'An ensemble in conversation', heroTitle: 'Music you<br><em>feel</em> before<br>you name it.', heroIntro: 'Jalsat Tarab is a circle of seven musicians keeping the old songs close, and leaving room for something new.', enter: 'Enter the majlis <span>↓</span>', vertical: 'Voice • memory • feeling', caption: 'members<br>in one room', aboutTag: '01 / The feeling', aboutTitle: 'A gathering,<br><em>not a genre.</em>', aboutOne: 'We meet somewhere between Sudanese golden age, Arabic tarab, poetry longing, and the songs our parents played too loud.', aboutTwo: 'There is a pulse underneath it all: listen deeply, answer honestly, and let the room decide where the song goes next.', membersTag: '02 / The people', membersTitle: 'Seven ways to<br><em>say the same thing.</em>', mediaTag: '03 / On record', mediaTitle: 'Shared<br><em>moments.</em>', mediaIntro: 'Watch the ensemble in motion. Each video connects back to the people singing and playing in it.', mediaEmpty: 'Videos will appear here when the ensemble’s recordings are ready.', mediaHeaders: ['Video', 'YouTube'], guestbookTag: '04 / Leave a note', guestbookTitle: 'What did<br><em>you hear?</em>', guestbookIntro: 'Leave a thought for the ensemble. Notes are reviewed before they appear here.', nameLabel: 'Your name', noteLabel: 'Your note', namePlaceholder: 'A name or initials', notePlaceholder: 'Tell us what stayed with you...', post: 'Post note <span>↗</span>', footer: 'Seven musicians. One open room.', next: 'Next member <span>→</span>', photoEmpty: 'Your ensemble pictures will roll here.', commentEmpty: 'The guestbook is open. Be the first to leave a note.', commentUnavailable: 'The guestbook is temporarily unavailable.', sending: 'Sending your note for review...', thankYou: 'Thank you. Your note is awaiting approval.', sendError: 'The note could not be sent. Please try again.', notConnected: 'The guestbook is not connected yet.'
+    htmlLang: 'en', direction: 'ltr', nav: ['Our sound', 'The ensemble', 'Media', 'Guestbook'], headerCta: 'Meet the seven <span>↗</span>', eyebrow: 'An ensemble in conversation', heroTitle: 'Music you<br><em>feel</em> before<br>you name it.', heroIntro: 'Jalsat Tarab is a circle of seven musicians keeping the old songs close, and leaving room for something new.', enter: 'Enter the majlis <span>↓</span>', vertical: 'Voice • memory • feeling', caption: 'members<br>in one room', aboutTag: '01 / The feeling', aboutTitle: 'A gathering,<br><em>not a genre.</em>', aboutOne: 'We meet somewhere between Sudanese golden age, Arabic tarab, poetry longing, and the songs our parents played too loud.', aboutTwo: 'There is a pulse underneath it all: listen deeply, answer honestly, and let the room decide where the song goes next.', membersTag: '02 / The people', membersTitle: 'Seven ways to<br><em>say the same thing.</em>', mediaTag: '03 / On record', mediaTitle: 'Shared<br><em>moments.</em>', mediaIntro: 'Watch the ensemble in motion. Each video connects back to the people singing and playing in it.', mediaEmpty: 'Videos will appear here when the ensemble’s recordings are ready.', mediaWatch: 'Open on YouTube <span>↗</span>', guestbookTag: '04 / Leave a note', guestbookTitle: 'What did<br><em>you hear?</em>', guestbookIntro: 'Leave a thought for the ensemble. Notes are reviewed before they appear here.', nameLabel: 'Your name', noteLabel: 'Your note', namePlaceholder: 'A name or initials', notePlaceholder: 'Tell us what stayed with you...', post: 'Post note <span>↗</span>', footer: 'Seven musicians. One open room.', next: 'Next member <span>→</span>', photoEmpty: 'Your ensemble pictures will roll here.', commentEmpty: 'The guestbook is open. Be the first to leave a note.', commentUnavailable: 'The guestbook is temporarily unavailable.', sending: 'Sending your note for review...', thankYou: 'Thank you. Your note is awaiting approval.', sendError: 'The note could not be sent. Please try again.', notConnected: 'The guestbook is not connected yet.'
   },
   ar: {
-    htmlLang: 'ar', direction: 'rtl', nav: ['صوتنا', 'الأعضاء', 'المواد المرئية', 'دفتر الزوار'], headerCta: 'تعرّف على السبعة <span>↗</span>', eyebrow: 'فرقة في حوار', heroTitle: 'موسيقى<br><em>تشعر بها</em> قبل<br>أن تسميها.', heroIntro: 'جلسة طرب هي دائرة من سبعة موسيقيين، نُبقي الأغاني القديمة قريبة ونترك مساحة لما هو جديد.', enter: 'ادخل المجلس <span>↓</span>', vertical: 'صوت • ذاكرة • إحساس', caption: 'سبعة أعضاء<br>في مجلس واحد', aboutTag: '01 / الإحساس', aboutTitle: 'جلسة،<br><em>لا نوع موسيقي.</em>', aboutOne: 'نلتقي بين العصر الذهبي للموسيقى السودانية، والطرب العربي، والشجن الشعري، والأغاني التي كان آباؤنا يرفعون صوتها.', aboutTwo: 'تحت كل ذلك نبض واحد: أن نصغي بعمق، ونجيب بصدق، ونترك للمجلس أن يقرر إلى أين تمضي الأغنية.', membersTag: '02 / الأشخاص', membersTitle: 'سبعة طرق<br><em>لقول الشيء نفسه.</em>', mediaTag: '03 / في التسجيل', mediaTitle: 'لحظات<br><em>مشتركة.</em>', mediaIntro: 'شاهد الفرقة وهي تغني وتعزف. كل فيديو يقودك إلى الأشخاص المشاركين فيه.', mediaEmpty: 'ستظهر الفيديوهات هنا عندما تصبح تسجيلات الفرقة جاهزة.', mediaHeaders: ['الفيديو', 'يوتيوب'], guestbookTag: '04 / اترك رسالة', guestbookTitle: 'ماذا<br><em>سمعت؟</em>', guestbookIntro: 'اترك كلمة للفرقة. نراجع الرسائل قبل ظهورها هنا.', nameLabel: 'اسمك', noteLabel: 'رسالتك', namePlaceholder: 'الاسم أو الأحرف الأولى', notePlaceholder: 'اكتب ما بقي معك...', post: 'انشر الرسالة <span>↗</span>', footer: 'سبعة موسيقيين. مجلس واحد مفتوح.', next: 'العضو التالي <span>→</span>', photoEmpty: 'ستظهر صور الفرقة هنا بالتتابع.', commentEmpty: 'دفتر الزوار مفتوح. كن أول من يترك رسالة.', commentUnavailable: 'دفتر الزوار غير متاح مؤقتاً.', sending: 'جارٍ إرسال رسالتك للمراجعة...', thankYou: 'شكراً لك. رسالتك بانتظار الموافقة.', sendError: 'تعذّر إرسال الرسالة. حاول مرة أخرى.', notConnected: 'دفتر الزوار غير متصل بعد.'
+    htmlLang: 'ar', direction: 'rtl', nav: ['صوتنا', 'الأعضاء', 'المواد المرئية', 'دفتر الزوار'], headerCta: 'تعرّف على السبعة <span>↗</span>', eyebrow: 'فرقة في حوار', heroTitle: 'موسيقى<br><em>تشعر بها</em> قبل<br>أن تسميها.', heroIntro: 'جلسة طرب هي دائرة من سبعة موسيقيين، نُبقي الأغاني القديمة قريبة ونترك مساحة لما هو جديد.', enter: 'ادخل المجلس <span>↓</span>', vertical: 'صوت • ذاكرة • إحساس', caption: 'سبعة أعضاء<br>في مجلس واحد', aboutTag: '01 / الإحساس', aboutTitle: 'جلسة،<br><em>لا نوع موسيقي.</em>', aboutOne: 'نلتقي بين العصر الذهبي للموسيقى السودانية، والطرب العربي، والشجن الشعري، والأغاني التي كان آباؤنا يرفعون صوتها.', aboutTwo: 'تحت كل ذلك نبض واحد: أن نصغي بعمق، ونجيب بصدق، ونترك للمجلس أن يقرر إلى أين تمضي الأغنية.', membersTag: '02 / الأشخاص', membersTitle: 'سبعة طرق<br><em>لقول الشيء نفسه.</em>', mediaTag: '03 / في التسجيل', mediaTitle: 'لحظات<br><em>مشتركة.</em>', mediaIntro: 'شاهد الفرقة وهي تغني وتعزف. كل فيديو يقودك إلى الأشخاص المشاركين فيه.', mediaEmpty: 'ستظهر الفيديوهات هنا عندما تصبح تسجيلات الفرقة جاهزة.', mediaWatch: 'شاهد على يوتيوب <span>↗</span>', guestbookTag: '04 / اترك رسالة', guestbookTitle: 'ماذا<br><em>سمعت؟</em>', guestbookIntro: 'اترك كلمة للفرقة. نراجع الرسائل قبل ظهورها هنا.', nameLabel: 'اسمك', noteLabel: 'رسالتك', namePlaceholder: 'الاسم أو الأحرف الأولى', notePlaceholder: 'اكتب ما بقي معك...', post: 'انشر الرسالة <span>↗</span>', footer: 'سبعة موسيقيين. مجلس واحد مفتوح.', next: 'العضو التالي <span>→</span>', photoEmpty: 'ستظهر صور الفرقة هنا بالتتابع.', commentEmpty: 'دفتر الزوار مفتوح. كن أول من يترك رسالة.', commentUnavailable: 'دفتر الزوار غير متاح مؤقتاً.', sending: 'جارٍ إرسال رسالتك للمراجعة...', thankYou: 'شكراً لك. رسالتك بانتظار الموافقة.', sendError: 'تعذّر إرسال الرسالة. حاول مرة أخرى.', notConnected: 'دفتر الزوار غير متصل بعد.'
   }
 };
 
@@ -143,7 +143,6 @@ function setLanguage(language) {
   document.querySelector('.members h2').innerHTML = copy.membersTitle;
   document.querySelector('.media h2').innerHTML = copy.mediaTitle;
   document.querySelector('.media-head p').textContent = copy.mediaIntro;
-  document.querySelectorAll('.media-table th').forEach((header, index) => { header.textContent = copy.mediaHeaders[index]; });
   document.querySelector('.guestbook h2').innerHTML = copy.guestbookTitle;
   document.querySelector('.guestbook-intro').textContent = copy.guestbookIntro;
   document.querySelector('label[for="visitor-name"]').textContent = copy.nameLabel;
@@ -157,7 +156,7 @@ function setLanguage(language) {
   document.querySelectorAll('.footer-links a')[1].textContent = language === 'ar' ? 'تواصل ↗' : 'Contact ↗';
   document.querySelector('.photo-empty').textContent = copy.photoEmpty;
   document.querySelectorAll('[data-language]').forEach(button => button.setAttribute('aria-pressed', button.dataset.language === language));
-  if (!media.length) document.querySelector('.media-empty').textContent = copy.mediaEmpty;
+  localizeMedia(copy);
   document.querySelector('.photo-banner').setAttribute('aria-label', language === 'ar' ? 'صور الفرقة المتتابعة' : 'Jalsat Tarab rolling pictures');
   document.querySelector('.photo-prev').setAttribute('aria-label', language === 'ar' ? 'الصورة السابقة' : 'Previous picture');
   document.querySelector('.photo-next').setAttribute('aria-label', language === 'ar' ? 'الصورة التالية' : 'Next picture');
@@ -165,8 +164,7 @@ function setLanguage(language) {
   document.querySelector('.nav').setAttribute('aria-label', language === 'ar' ? 'التنقل الرئيسي' : 'Primary navigation');
   document.querySelector('.language-toggle').setAttribute('aria-label', language === 'ar' ? 'اختيار اللغة' : 'Language switcher');
   document.querySelector('.photo-dots').setAttribute('aria-label', language === 'ar' ? 'اختيار الصورة' : 'Picture selection');
-  document.querySelector('.media-table').setAttribute('aria-label', language === 'ar' ? 'فيديوهات جلسة طرب والأعضاء المشاركون' : 'Jalsat Tarab videos and participating members');
-  document.querySelector('.media-table caption').textContent = language === 'ar' ? 'فيديوهات جلسة طرب والأعضاء المشاركون' : 'Jalsat Tarab videos and participating members';
+  document.querySelector('.media-list').setAttribute('aria-label', language === 'ar' ? 'فيديوهات جلسة طرب والأعضاء المشاركون' : 'Jalsat Tarab videos and participating members');
   document.querySelector('.hero-art').setAttribute('aria-label', language === 'ar' ? 'صورة فنية لفرقة جلسة طرب' : 'Abstract portrait of a musician with oud');
   renderCommentsLanguage();
   selectMember(activeIndex);
@@ -233,7 +231,7 @@ resetPhotoTimer();
 
 function renderMedia() {
   if (!media.length) {
-    mediaList.innerHTML = `<tr><td class="media-empty" colspan="3">${translations[document.documentElement.lang].mediaEmpty}</td></tr>`;
+    mediaList.innerHTML = `<li class="media-empty">${translations[document.documentElement.lang].mediaEmpty}</li>`;
     return;
   }
   mediaList.innerHTML = media.map((video) => {
@@ -241,7 +239,7 @@ function renderMedia() {
       const memberIndex = members.findIndex(member => member.name === memberName);
       return `<a class="media-profile-link" href="#members" data-member-index="${memberIndex}">${memberIndex >= 0 ? localizedMemberName(members[memberIndex]) : memberName}</a>`;
     }).join('');
-    return `<tr><td><div class="media-title"><iframe class="media-player" src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong dir="auto">${video.title}</strong><div class="media-people">${people}</div></div></td><td><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">Open on YouTube <span>↗</span></a></td></tr>`;
+    return `<li class="media-card"><iframe class="media-player" src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.title}" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong dir="auto">${video.title}</strong><div class="media-people">${people}</div><a class="media-watch" href="${video.url}" target="_blank" rel="noopener">${translations[document.documentElement.lang].mediaWatch}</a></li>`;
   }).join('');
   mediaList.querySelectorAll('.media-profile-link').forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -250,6 +248,16 @@ function renderMedia() {
       document.querySelector('#members').scrollIntoView({ behavior: 'smooth' });
     });
   });
+}
+
+function localizeMedia(copy) {
+  const empty = mediaList.querySelector('.media-empty');
+  if (empty) empty.textContent = copy.mediaEmpty;
+  mediaList.querySelectorAll('.media-profile-link').forEach((link) => {
+    const memberIndex = Number(link.dataset.memberIndex);
+    if (memberIndex >= 0) link.textContent = localizedMemberName(members[memberIndex]);
+  });
+  mediaList.querySelectorAll('.media-watch').forEach((link) => { link.innerHTML = copy.mediaWatch; });
 }
 
 const commentForm = document.querySelector('.comment-form');
