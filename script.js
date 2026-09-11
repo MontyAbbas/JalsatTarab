@@ -100,7 +100,7 @@ const media = [
     title: 'أسمعنا مرة—شرف',
     youtubeId: 'KQotEpE_TR0',
     url: 'https://www.youtube.com/watch?v=KQotEpE_TR0',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
   }
 ];
 
