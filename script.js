@@ -110,7 +110,7 @@ const rollingPictures = [
   { image: 'pictures/img_2169.jpg', title: { en: 'Singing to the crowd', ar: 'غناء للجمهور' }, detail: { en: 'SASF · on stage', ar: 'SASF · على المسرح' } },
   { image: 'pictures/img_2161.jpg', title: { en: 'Before the set', ar: 'قبل الوصلة' }, detail: { en: 'SASF · backstage', ar: 'SASF · خلف الكواليس' } },
   { image: 'pictures/img_2217.jpg', title: { en: 'A night in New York', ar: 'ليلة في نيويورك' }, detail: { en: 'After the show', ar: 'بعد الحفل' } },
-  { image: 'pictures/img_0180.jpg', title: { en: 'Between songs', ar: 'بين الأغاني' }, detail: { en: 'Jalsat Tarab', ar: 'جلسة طرب' } }
+  { image: 'pictures/img_0180.jpg', title: { en: 'Michigan', ar: 'ميشيغان' }, detail: { en: 'Jalsat Tarab', ar: 'جلسة طرب' } }
 ];
 
 const translations = {
