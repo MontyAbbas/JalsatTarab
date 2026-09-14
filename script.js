@@ -104,13 +104,16 @@ const media = [
   }
 ];
 
-// Each picture: { image, title: { en, ar }, detail: { en, ar } }. Originals live in the Jalsat folder; web copies in pictures/.
+// Each picture: { image, title: { en, ar }, detail: { en, ar }, position? }. position is an optional CSS object-position for the crop. Originals live in the Jalsat folder; web copies in pictures/.
 const rollingPictures = [
   { image: 'pictures/img_2167.jpg', title: { en: 'Under the festival tent', ar: 'تحت خيمة المهرجان' }, detail: { en: 'SASF · on stage', ar: 'SASF · على المسرح' } },
   { image: 'pictures/img_2169.jpg', title: { en: 'Singing to the crowd', ar: 'غناء للجمهور' }, detail: { en: 'SASF · on stage', ar: 'SASF · على المسرح' } },
   { image: 'pictures/img_2161.jpg', title: { en: 'Before the set', ar: 'قبل الوصلة' }, detail: { en: 'SASF · backstage', ar: 'SASF · خلف الكواليس' } },
   { image: 'pictures/img_2217.jpg', title: { en: 'A night in New York', ar: 'ليلة في نيويورك' }, detail: { en: 'After the show', ar: 'بعد الحفل' } },
-  { image: 'pictures/img_0180.jpg', title: { en: 'Michigan', ar: 'ميشيغان' }, detail: { en: 'Jalsat Tarab', ar: 'جلسة طرب' } }
+  { image: 'pictures/img_0180.jpg', title: { en: 'Michigan', ar: 'ميشيغان' }, detail: { en: 'Jalsat Tarab', ar: 'جلسة طرب' } },
+  { image: 'pictures/montasir.jpeg', title: { en: 'Welcome to New York', ar: 'مرحباً بكم في نيويورك' }, detail: { en: 'SASF · on stage', ar: 'SASF · على المسرح' } },
+  { image: 'pictures/khidir_sharaf.jpeg', title: { en: 'Khadir and Sharaf', ar: 'خضر وشرف' }, detail: { en: 'SASF · under the tent', ar: 'SASF · تحت الخيمة' } },
+  { image: 'pictures/alhawi.jpeg', title: { en: 'Alhawi at the keys', ar: 'الحاوي على الكيبورد' }, detail: { en: 'On stage', ar: 'على المسرح' }, position: 'center 38%' }
 ];
 
 const translations = {
@@ -204,7 +207,7 @@ function renderPhoto(index) {
   const language = document.documentElement.lang === 'ar' ? 'ar' : 'en';
   const title = picture.title[language];
   const detail = (picture.detail && picture.detail[language]) || 'Jalsat Tarab';
-  photoStage.innerHTML = `<figure class="photo-slide"><img src="${picture.image}" alt="${title}"><figcaption><strong>${title}</strong><span>${detail}</span></figcaption></figure>`;
+  photoStage.innerHTML = `<figure class="photo-slide"><img src="${picture.image}" alt="${title}" style="object-position: ${picture.position || 'center'}"><figcaption><strong>${title}</strong><span>${detail}</span></figcaption></figure>`;
   photoDots.querySelectorAll('.photo-dot').forEach((dot, dotIndex) => dot.classList.toggle('active', dotIndex === index));
 }
 
