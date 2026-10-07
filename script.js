@@ -5,7 +5,7 @@ const members = [
   { name: 'Mohamed Osman', role: 'Lead vocal', image: 'Mohamed.jpeg', bio: 'Mohamed began performing in school competitions and with the Abnous Troupe, led by Mr. Nasser Abdulaziz. His musical world is shaped by a lasting passion for singing and Sudanese artists.', tags: ['Modern singing', 'Sudanese music'], facts: [['From', 'Khartoum North, Sudan'], ['Languages', 'Arabic'], ['Signature song', 'Bakhaf — Abu Araki / Al-Bakhit'], ['Influences', 'Mahmoud Abdel Aziz, Abu Araki, Al-Hadi Al-Jabal, Al-Tayeb Abdullah, Zidan']], quote: 'I have had a talent since I was young. I love music and I am passionate about it.' },
   { name: 'Abusugra', role: 'Lead vocal', image: 'Abusugra.jpeg', bio: 'From Sudan, Abusugra brings a love of singing and a Sudanese musical sensibility to the ensemble.', tags: ['Sudanese'], facts: [['From', 'Sudan'], ['Languages', 'Arabic'], ['Instrument', 'Organ']], quote: 'Singing.' },
   { name: 'Khadir Abubaker', role: 'Lead vocal · Oud · Keyboard · Violin · Cajon', image: 'khidir.jpeg', bio: 'Khadir’s love of melody began at school in Sennar, where he set the school anthems to tunes of his own and sang them at morning assembly, and built a wooden rababa at home beside a carpenter’s shop. At ten, a friend of his uncle walked in carrying an oud, and he watched it from behind the door, captivated. In 1988, visiting his father in Al-Hawata, a relative let him hold an oud for the first time and began teaching him. He is also a skilled portrait artist.', tags: ['Sudanese golden age', 'Egyptian tarab', 'Khaliji'], facts: [['From', 'Sennar, Sudan'], ['Maqams', 'Nahawand, Hijaz, Saba, Kurd'], ['Languages', 'Sudanese Arabic, Classical Arabic'], ['Instruments', 'Oud · keyboard · guitar · cajon · rababa'], ['Signature songs', 'رمشة عيني · في بعدك يا غالي'], ['Influences', 'Zidan Ibrahim, Ibrahim Hussein, Ibrahim Awad, Osman Hussein, Wardi, Al-Khalidi, Abdel Aziz Al-Mubarak, and many more Sudanese artists'], ['Moment', 'Musical Professions Union, Port Sudan']], quote: 'I love Sudanese art and Sudanese music, and I love the arts in general.' },
-  { name: 'Alhawi', role: 'Ensemble member', image: 'Hisham.jpeg', bio: 'This profile is ready for Alhawi’s role, background, and musical story.', tags: ['Profile pending'], facts: [], quote: 'Add Alhawi’s own words here.' }
+  { name: 'Wad Alhawi', role: 'Accordion · Keyboard', image: 'Hisham.jpeg', bio: 'Wad Alhawi plays accordion and keyboard, rooted in the Sudanese golden age and the sīra folk tradition. He has played alongside Mohammed Al Amin and Abu Araki.', tags: ['Sudanese golden age', 'Sudanese sīra / folk'], facts: [['From', 'Omdurman, Sudan'], ['Maqams', 'Pentatonic'], ['Languages', 'Arabic'], ['Instruments', 'Accordion · Keyboard'], ['Signature songs', 'بتتعلم من الأيام · محمد الأمين; خاف · محمد وردي; الأكتوبريات · محمد الأمين'], ['Played with', 'Mohammed Al Amin, Abu Araki']], quote: 'I like music.' }
 ];
 
 const totalMembers = members.length;
@@ -31,7 +31,7 @@ const memberArabic = {
   'Mohamed Osman': { name: 'محمد عثمان', role: 'غناء رئيسي', bio: 'بدأ محمد المشاركة في مسابقات المدرسة ومع فرقة الأبنوس بقيادة الأستاذ ناصر عبد العزيز. وتشكل شغفه الموسيقي محبة الغناء والفنانين السودانيين.', tags: ['غناء حديث', 'موسيقى سودانية'], facts: [['من', 'الخرطوم بحري، السودان'], ['اللغات', 'العربية'], ['أغنية مميزة', 'بخاف — أبو عركي / البخيت'], ['التأثيرات', 'محمود عبد العزيز، أبو عركي، الهادي الجبل، الطيب عبد الله، زيدان']], quote: 'كانت لدي موهبة منذ الصغر. أحب الموسيقى وشغوف بها.' },
   'Abusugra': { name: 'أبوسقرة', role: 'غناء رئيسي', bio: 'من السودان، يجلب أبوسقرة محبة الغناء وحساً موسيقياً سودانياً إلى الفرقة.', tags: ['سوداني'], facts: [['من', 'السودان'], ['اللغات', 'العربية'], ['الآلة', 'الأورغ']], quote: 'الغناء.' },
   'Khadir Abubaker': { name: 'خضر أبوبكر', role: 'غناء رئيسي · عود · كيبورد · كمان · كاخون', bio: 'بدأ حب الألحان عند خضر في المدرسة بسنار، حيث كان يلحّن الأناشيد ويغنيها في طابور الصباح، ويصنع الربابة الخشبية في المنزل بجوار دكان نجار. وفي العاشرة من عمره جاء صديق لخاله يحمل عوداً، فراقبه من خلف الباب مفتوناً. وفي عام ١٩٨٨، في زيارة لوالده بالحواتة، أمسك العود لأول مرة عند أحد أقاربه الذي بدأ يعلّمه. وهو أيضاً رسّام بورتريه محترف.', tags: ['العصر الذهبي السوداني', 'الطرب المصري', 'الخليجي'], facts: [['من', 'سنار، السودان'], ['المقامات', 'نهاوند، حجاز، صبا، كرد'], ['اللغات', 'العربية السودانية، العربية الفصحى'], ['الآلات', 'العود · كيبورد · جيتار · كاخون · ربابة'], ['أغانٍ مميزة', 'رمشة عيني · في بعدك يا غالي'], ['التأثيرات', 'زيدان إبراهيم، إبراهيم حسين، إبراهيم عوض، عثمان حسين، وردي، الخالدي، عبد العزيز المبارك، وعدد كبير من الفنانين السودانيين'], ['مناسبة', 'اتحاد المهن الموسيقية، بورتسودان']], quote: 'أحب الفن السوداني والموسيقى السودانية، وأحب الفنون عموماً.' },
-  'Alhawi': { name: 'الحاوي', role: 'عضو في الفرقة', bio: 'هذا الملف جاهز لإضافة دور الحاوي وخلفيته وقصته الموسيقية.', tags: ['الملف قيد الإعداد'], quote: 'أضف كلمات الحاوي هنا.' }
+  'Wad Alhawi': { name: 'ود الحاوي', role: 'أكورديون · كيبورد', bio: 'يعزف ود الحاوي الأكورديون والكيبورد، متجذّراً في العصر الذهبي السوداني وتراث السيرة الشعبية، وقد عزف إلى جانب محمد الأمين وأبو عركي.', tags: ['العصر الذهبي السوداني', 'السيرة الشعبية السودانية'], facts: [['من', 'أم درمان، السودان'], ['المقامات', 'خماسي'], ['اللغات', 'العربية'], ['الآلات', 'أكورديون · كيبورد'], ['أغانٍ مميزة', 'بتتعلم من الأيام · محمد الأمين؛ خاف · محمد وردي؛ الأكتوبريات · محمد الأمين'], ['عزف مع', 'محمد الأمين وأبو عركي']], quote: 'أحب الموسيقى.' }
 };
 
 // Add videos here with the YouTube URL and the member names who appear in them.
@@ -40,67 +40,67 @@ const media = [
     title: 'إمتى أرجع لأمدر و أعوده—توفيق و منتصر',
     youtubeId: 'TfEayDvVOJs',
     url: 'https://www.youtube.com/watch?v=TfEayDvVOJs',
-    members: ['Montasir Abbas', 'Tawfieg Osman', 'Alhawi']
+    members: ['Montasir Abbas', 'Tawfieg Osman', 'Wad Alhawi']
   },
   {
     title: 'العيون فيها سلام—شرف',
     youtubeId: 'KuNto16VF78',
     url: 'https://www.youtube.com/watch?v=KuNto16VF78',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'أنا فيك عشقت—محمد',
     youtubeId: 'rC8z3XWvdjg',
     url: 'https://www.youtube.com/watch?v=rC8z3XWvdjg',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'كلمني يا حلو العيون—توفيق',
     youtubeId: 'GUNiEn1rlV8',
     url: 'https://www.youtube.com/watch?v=GUNiEn1rlV8&t=34s',
-    members: ['Tawfieg Osman', 'Montasir Abbas', 'Alhawi']
+    members: ['Tawfieg Osman', 'Montasir Abbas', 'Wad Alhawi']
   },
   {
     title: 'قول النصيحة—شرف',
     youtubeId: 'qe0P2UKyOnw',
     url: 'https://www.youtube.com/watch?v=qe0P2UKyOnw',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Tawfieg Osman']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Wad Alhawi', 'Tawfieg Osman']
   },
   {
     title: 'يا ناعم العود—توفيق و منتصر',
     youtubeId: 'awbDeGfdtw0',
     url: 'https://www.youtube.com/watch?v=awbDeGfdtw0',
-    members: ['Tawfieg Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Tawfieg Osman', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'أحلى جارة—شرف',
     youtubeId: '2ViOU2hIVP4',
     url: 'https://www.youtube.com/watch?v=2ViOU2hIVP4',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'أنا فيك عشقت—محمد',
     youtubeId: 'fxlgvdJ45-g',
     url: 'https://www.youtube.com/watch?v=fxlgvdJ45-g',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'طريقة دايما فارشو ورد—محمد',
     youtubeId: '18d_pdq6_qM',
     url: 'https://www.youtube.com/watch?v=18d_pdq6_qM',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'بخاف—محمد',
     youtubeId: 'g_54Pt3Q7Yw',
     url: 'https://www.youtube.com/watch?v=g_54Pt3Q7Yw',
-    members: ['Mohamed Osman', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Mohamed Osman', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   },
   {
     title: 'أسمعنا مرة—شرف',
     youtubeId: 'KQotEpE_TR0',
     url: 'https://www.youtube.com/watch?v=KQotEpE_TR0',
-    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Alhawi', 'Osama Elasad']
+    members: ['Sharaf Yaseen', 'Montasir Abbas', 'Wad Alhawi', 'Osama Elasad']
   }
 ];
 
